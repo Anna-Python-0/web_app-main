@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>Итоговая работа</title>
+
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+		<link href="{{ url_for('static', filename='fonts/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+		<link href="{{ url_for('static', filename='fonts/icomoon/style.css') }}" rel="stylesheet" type="text/css">
+
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+		
+		<!--[if lt IE 9]>
+		<script src="js/ie-support/html5.js"></script>
+		<script src="js/ie-support/respond.js"></script>
+		<![endif]-->
+
+	</head>
+
+
+	<body>
+		
+		<div class="site-content">
+			<div class="container">
+				<main class="main-content">
+					<header class="site-header">
+						<a href="{{ url_for('hello_world') }}" class="logo"><img src="{{ url_for('static', filename='images/logo2.png') }}" alt=""></a>
+						<div class="header-type">
+							<h1>Web-приложение «Путешествия». </h1>
+							<p>Итоговая работа Бридько Анны Ивановны 
+							<br>Курс Python-разработчик: web-приложения с нуля
+							<br>Организация Томский государственный университет, Поток ПР-804, Группа 1 
+							<br>
+							<p><strong> {{ my_action }}  <!-- место под сообщение от сервера -->		</strong>
+
+						</div>
+
+					</header> <!-- .site-header -->					
+					
+					<div class="content">
+
+
+						<div class="row">
+							<div class="col-md-4">
+								<div class="feature rounded-icon-u">
+									<div class="feature-icon"><i class="icon-owl"></i></div>
+									<h3 class="feature-title"> <a href="{{ url_for('hello_world') }}">Главная</a> </h3>
+									<p>Заходите</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="feature rounded-icon">
+									<div class="feature-icon"><i class="icon-bus"></i></div>
+									<h3 class="feature-title">  <a href="{{ url_for('form_tour') }}">Добавить путешествие </a></h3>
+									<p>Добавляйте</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="feature rounded-icon-u">
+									<div class="feature-icon"><i class="icon-school"></i></div>
+									<h3 class="feature-title"> <a href="{{ url_for('tours') }}">Список </a></h3>
+									<p>Смотрите список</p>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="banner">
+							<img src="{{ url_for('static', filename='dummy/banner.jpg') }}" alt="Banner">
+						</div>
+					</div>
+
+				</main>
+
+
+
+				<footer class="site-footer">
+					<p>Copyright &copy; 2024 Anna Bridko. Designed by Themezy. All rights reserved</p>
+				</footer>
+
+				
+			</div>
+
+		</div>
+
+		<script src="{{ url_for('static', filename='js/jquery-1.11.1.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+		
+	</body>
+
+</html>
